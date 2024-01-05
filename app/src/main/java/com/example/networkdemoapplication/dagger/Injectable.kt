@@ -1,0 +1,3 @@
+package com.example.networkdemoapplication.dagger
+
+interface Injectable
