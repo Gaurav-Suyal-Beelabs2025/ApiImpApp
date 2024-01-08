@@ -33,4 +33,12 @@ open class BaseFragment : Fragment() {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
+     fun switchFragment(fragment: Fragment) {
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.main_layout, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
+
 }

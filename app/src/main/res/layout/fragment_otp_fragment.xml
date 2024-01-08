@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent" >
+
+
+
+    <ImageView
+        android:id="@+id/backspace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backbutton"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/mobaile_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile Verification"
+        android:textSize="32sp"
+        android:textColor="#3D3D3D"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/space_grotesk_semibold"
+        app:layout_constraintTop_toBottomOf="@+id/backspace"
+        app:layout_constraintStart_toStartOf="@+id/backspace"/>
+
+    <TextView
+        android:id="@+id/enter_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter OTP"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="#3D3D3D"
+        android:fontFamily="@font/space_grotesk_medium"
+        app:layout_constraintStart_toStartOf="@+id/mobaile_otp"
+        app:layout_constraintTop_toBottomOf="@+id/mobaile_otp" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/otp_box"
+        style="@style/PinWidget.PinView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:cursorVisible="true"
+        android:hint="Hint."
+        android:inputType="text"
+        android:itemBackground="#F6F9FF"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:cursorColor="@color/teal_200"
+        app:cursorWidth="1dp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="48dp"
+        app:itemRadius="8dp"
+        app:itemSpacing="@dimen/_10sdp"
+        app:itemWidth="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/enter_otp"
+        app:layout_constraintTop_toBottomOf="@+id/enter_otp"
+        app:lineColor="#F6F9FF"
+        app:lineWidth="1dp"
+        app:viewType="rectangle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_box">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/space_grotesk"
+            android:text="A 6 digit code has been sent to"
+            android:textColor="#3D3D3D"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/penimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/penlogo"
+            android:fontFamily="@font/inter_semibold"
+            android:text="+91 9811102223 "
+            android:textColor="#3D3D3D"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/time_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/watchtime"
+        android:fontFamily="@font/inter_semibold"
+        android:text=" 02:34"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/verify_otp_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/otp_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/resend_drwble"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="Re-send"
+        android:textAllCaps="false"
+        android:paddingHorizontal="@dimen/_65sdp"
+        android:textColor="#414141"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/verify_otp_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/verify_drwble"
+        android:backgroundTint="#94FF8B"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingHorizontal="@dimen/_65sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="#414141"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/otp_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,5 +14,10 @@ abstract class ViewModelsModule {
     @ViewModelKey(TestViewModel::class)
     abstract fun bindTestViewModal(viewModel: TestViewModel): ViewModel
 
+    @Binds
+    @IntoMap
+    @ViewModelKey(LogInViewModel::class)
+    abstract fun bindLogInViewModel(viewModel: LogInViewModel): ViewModel
+
 
 }

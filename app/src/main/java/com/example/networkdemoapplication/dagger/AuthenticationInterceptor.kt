@@ -15,7 +15,7 @@ class AuthenticationInterceptor @Inject constructor() : Interceptor {
         if (SharedPref.keyExists(Constant.TOKEN)) {
             val token = SharedPref.read(Constant.TOKEN, null)
             if (token != null) {
-                builder.header("Authorization", token)
+                builder.header("token", token)
             }
         }
         return chain.proceed(builder.build())

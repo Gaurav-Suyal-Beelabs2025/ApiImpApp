@@ -12,5 +12,6 @@ class Constant {
         const val WRITE_TIMEOUT: Long = 2
         const val BASEURL = "http://43.204.89.10:4052/v1/"
         const val TOKEN = "Token"
+        const val MOBILE_NUMBER = "mobileNumber"
     }
 }

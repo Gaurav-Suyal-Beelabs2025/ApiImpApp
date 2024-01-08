@@ -47,7 +47,7 @@ class ApiClient {
             builder.addInterceptor { chain ->
                 val original = chain.request()
                 val request = original.newBuilder()
-                    .header("Authorization", token)
+                    .header("token", token)
                     .method(original.method, original.body)
                     .build()
                 chain.proceed(request)
