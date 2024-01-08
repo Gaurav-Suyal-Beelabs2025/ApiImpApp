@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.auth.MobileNumberFragment">
+
+    <ImageView
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backbutton"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@+id/backbutton"
+        app:layout_constraintBottom_toTopOf="@+id/sin_tick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mobaole_number_verification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Mobile Number\nVerification"
+                android:textColor="#3D3D3D"
+                android:textSize="32sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/enter_a_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@drawable/enter_a_number_drwble"
+                android:fontFamily="@font/inter_medium"
+                android:hint="Enter a number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingVertical="@dimen/_18sdp"
+                android:paddingStart="@dimen/_18sdp"
+                android:textAllCaps="false"
+                android:textColorHint="#88A9B4"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/mobaole_number_verification"
+                app:layout_constraintTop_toBottomOf="@+id/mobaole_number_verification" />
+
+            <TextView
+                android:id="@+id/taking_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Enter your main number to be used\ntaking orders"
+                android:textColor="#676767"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/mobaole_number_verification"
+                app:layout_constraintTop_toBottomOf="@+id/enter_a_number" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <CheckBox
+        android:id="@+id/sin_tick"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_4sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        app:layout_constraintBottom_toTopOf="@+id/verify_button"
+        app:layout_constraintStart_toStartOf="@+id/verify_button"/>
+
+    <TextView
+        android:id="@+id/handover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="terms &amp; condition"
+        android:textSize="14sp"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:textColor="#494949"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintBottom_toBottomOf="@+id/sin_tick"
+        app:layout_constraintStart_toEndOf="@+id/sin_tick"
+        app:layout_constraintTop_toTopOf="@+id/sin_tick" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/verify_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/verify_drwble"
+        android:paddingVertical="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Verify "
+            android:textColor="#414141"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:src="@drawable/endlogo"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

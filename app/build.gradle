@@ -85,4 +85,5 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:2.44"
     kapt "com.google.dagger:dagger-compiler:2.44"
     kapt "com.google.dagger:dagger-android-processor:2.44"
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
 }
