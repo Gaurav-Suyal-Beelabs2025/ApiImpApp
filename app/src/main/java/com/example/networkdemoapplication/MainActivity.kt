@@ -34,7 +34,7 @@ class MainActivity : BasicActivity(), Injectable {
         )
         settings.edit().commit()
 
-
+            switchFragment(MobileNumberFragment())
 
     }
 
